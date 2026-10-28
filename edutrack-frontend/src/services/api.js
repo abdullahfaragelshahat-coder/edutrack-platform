@@ -1,9 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
- baseURL: import.meta.env.VITE_API_BASE_URL + '/api'
-// أو
-
+    baseURL: 'https://edutrack-api-jbo5-ten.vercel.app/api', // حطنا الرابط صراحة هنا
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
