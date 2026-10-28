@@ -6,7 +6,10 @@ $_ENV['APP_PACKAGES_CACHE'] = '/tmp/packages.php';
 $_ENV['APP_CONFIG_CACHE'] = '/tmp/config.php';
 $_ENV['VIEW_COMPILED_PATH'] = '/tmp';
 
-// توجيه مسار اللوجات إلى مجلد مؤقت مسموح بالكتابة فيه
+// تحويل اللوجات إلى stderr لتجنب الكتابة في مسارات للقراءة فقط
 $_ENV['LOG_CHANNEL'] = 'stderr';
+
+// حل مشكلة الجلسات لو كانت مخزنة في قاعدة البيانات أو الملفات
+$_ENV['SESSION_DRIVER'] = 'cookie';
 
 require __DIR__ . '/../public/index.php';
